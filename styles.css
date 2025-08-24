@@ -22,7 +22,7 @@ body {
 /* Header Styles */
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 20px;
     color: #4a4a4a; /* Softer text color */
 }
 
@@ -35,20 +35,22 @@ header h1 {
 /* Navigation Styles */
 nav {
     margin: 20px 0;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-radius: 25px;
     transition: all 0.3s ease;
     background: rgba(245, 160, 172, 0.725); /* Light pastel pink */
@@ -63,7 +65,7 @@ nav a:hover {
 .section {
     background: #ffffff; /* White background for sections */
     margin: 20px 0;
-    padding: 40px;
+    padding: 3rem 1.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -124,7 +126,8 @@ nav a:hover {
 .chat-blog {
     background: #f8f9fa; /* Light pastel background */
     border-radius: 15px;
-    padding: 20px;
+    padding: 1.5rem;
+    margin: 0.5rem;
     border-left: 4px solid #ff6f61; /* Pastel coral */
     transition: all 0.3s ease;
 }
@@ -192,6 +195,29 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Reply Box Styles (JS-injected) */
+.reply-box textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.reply-box button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #ff6f61;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reply-box button:hover {
+    background: #ff856f;
+}
+
 /* Gallery Styles */
 .gallery {
     display: grid;
@@ -203,7 +229,7 @@ nav a:hover {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 40px 0;
+    padding: 2rem 1rem;
     color: #4a4a4a; /* Softer text color */
     margin-top: 40px;
 }
@@ -228,7 +254,7 @@ footer {
     }
 
     .section {
-        padding: 20px;
+        padding: 2rem 1rem;
         margin: 10px 0;
     }
 
@@ -239,10 +265,6 @@ footer {
     .gallery {
         grid-template-columns: 1fr;
     }
-
-    nav ul {
-        flex-wrap: wrap;
-    }
 }
 
 @media (max-width: 480px) {
@@ -251,7 +273,7 @@ footer {
     }
 
     header {
-        padding: 20px 0;
+        padding: 20px 10px;
     }
 
     header h1 {
@@ -259,7 +281,7 @@ footer {
     }
 
     .section {
-        padding: 15px;
+        padding: 1.5rem 1rem;
     }
 
     .intro h2, .blog-section h2 {
